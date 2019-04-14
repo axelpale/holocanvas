@@ -27,19 +27,18 @@ var makeCursorDisappear = function (el) {
   var timeout = null;
 
   var hideCursor = function () {
+    console.log('hide')
     el.style.cursor = 'none'
   }
 
   var showCursor = function () {
+    console.log('show')
     window.clearTimeout(timeout)
     timeout = setTimeout(hideCursor, 1000)
     el.style.cursor = 'auto'
   };
 
   el.addEventListener('mousemove', showCursor, false);
-
-  // Init
-  showCursor();
 };
 
 var main = function () {
