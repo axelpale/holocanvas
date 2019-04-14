@@ -17,12 +17,35 @@ var makeCanvasAutoFullwindow = function (canvas) {
   resizeCanvas();
 };
 
+var makeCursorDisappear = function (el) {
+  // Hides cursor after one second and reveals it on mouse move
+  //
+  // Parameter
+  //   el
+  //     HTML Element
+  //
+  var timeout = null;
+
+  var hideCursor = function () {
+    el.style.cursor = 'none'
+  }
+
+  var showCursor = function () {
+    window.clearTimeout(timeout)
+    timeout = setTimeout(hideCursor, 1000)
+    el.style.cursor = 'auto'
+  };
+
+  el.addEventListener('mousemove', showCursor, false);
+};
+
 var main = function () {
   var c = document.getElementById('canvas');
   // Everything is drawn on canvas.
   var ctx = canvas.getContext('2d');
   // Make canvas resize automatically to full window area
   makeCanvasAutoFullwindow(canvas);
+  makeCursorDisappear(canvas);
 
   var initModel = function () {
     // Returns the model.
