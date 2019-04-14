@@ -37,6 +37,9 @@ var makeCursorDisappear = function (el) {
   };
 
   el.addEventListener('mousemove', showCursor, false);
+
+  // Init
+  showCursor();
 };
 
 var main = function () {
