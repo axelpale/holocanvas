@@ -63,6 +63,12 @@ window.holocanvas.start = function (opts) {
   // The model is updated using opts.tickModel()
   // The model is visualized using opts.tickView()
   //
+  // Note: By convention, do not write latent variables in initModel.
+  //       Give only the source variables.
+  //       Latent variables are variables that depend on source variables.
+  //       Latent variables do not depend on themselves.
+  //       They should be created on runtime.
+  //
   var initModel = opts.initModel;
 
   // opts.tickModel = function (model, dt)
@@ -83,6 +89,9 @@ window.holocanvas.start = function (opts) {
   //   opts.tickModel = function (model, dt) {
   //     model.hue = (model.hue + 1) % 360;
   //   }
+  //
+  // By convention, update the source variables first and
+  // the latent variables then. It makes the code easy to read.
   //
   var tickModel = opts.tickModel;
 
