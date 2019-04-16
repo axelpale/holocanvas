@@ -1,5 +1,5 @@
 # holocanvas
 
-Hologram effect on canvas for projection mapping purposes
+A minimal framework for canvas effect animations. The original need was to create holographic effects for projection mapping purposes.
 
-See [the app in action](https://axelpale.github.io/holocanvas/).
+See [some example apps and more](https://axelpale.github.io/holocanvas/).
