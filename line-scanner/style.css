@@ -16,7 +16,7 @@ a:active { text-decoration: underline; }
 #canvas {
   position: fixed;
   top: 0px;
-  right: 0px;
+  left: 0px;
   display: block;
   margin: 0;
   width: 100%;

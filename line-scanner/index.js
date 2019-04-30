@@ -41,6 +41,6 @@ holocanvas.start({
     ctx.lineTo(x, H);  // Draw a line to (150, 100)
     ctx.strokeStyle = 'rgb(0,255,0)'
     ctx.lineWidth = 2;
-    ctx.stroke();          // Render the path
+    ctx.stroke(); // Render the path
   }
 });
