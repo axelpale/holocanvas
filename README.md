@@ -75,6 +75,9 @@ index.html:
   	<!--[if IE]>
   		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   	<![endif]-->
+    <!-- Android and iOS full screen mode when added to the home screen. -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
   </head>
 
   <body>
